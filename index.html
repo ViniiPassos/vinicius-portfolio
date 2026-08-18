@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vinicius Passos | Desenvolvedor .NET Back-End</title>
-<meta name="description" content="Desenvolvedor Back-End .NET especialista em microsserviços, tempo real e integração multi-fabricante.">
+<meta name="description" content="Desenvolvedor Back-End .NET. Microsserviços, integração de hardware multi-fabricante, biometria, IA, tempo real e observabilidade.">
 <style>
 :root {
   --bg: #0a0e17;
@@ -16,6 +16,7 @@
   --accent: #22d3ee;
   --accent2: #818cf8;
   --pink: #f472b6;
+  --green: #34d399;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -26,11 +27,10 @@ body {
   line-height: 1.65;
   overflow-x: hidden;
 }
-.container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+.container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
 
-/* animated gradient blobs */
 .blobs { position: fixed; inset: 0; z-index: -2; overflow: hidden; }
-.blob { position: absolute; border-radius: 50%; filter: blur(90px); opacity: 0.25; animation: drift 18s ease-in-out infinite; }
+.blob { position: absolute; border-radius: 50%; filter: blur(90px); opacity: 0.22; animation: drift 18s ease-in-out infinite; }
 .blob-1 { width: 520px; height: 520px; background: var(--accent); top: -140px; left: -120px; }
 .blob-2 { width: 460px; height: 460px; background: var(--accent2); bottom: -120px; right: -100px; animation-delay: -6s; }
 .blob-3 { width: 380px; height: 380px; background: var(--pink); top: 40%; left: 55%; animation-delay: -12s; }
@@ -47,51 +47,43 @@ body {
   mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 20%, transparent 75%);
 }
 
-/* NAV */
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; transition: background .3s, border-color .3s; border-bottom: 1px solid transparent; }
 nav.scrolled { background: rgba(10,14,23,0.8); backdrop-filter: blur(12px); border-color: rgba(255,255,255,0.07); }
 nav .container { display: flex; align-items: center; justify-content: space-between; height: 66px; }
 .logo { font-weight: 800; font-size: 19px; letter-spacing: 0.3px; }
 .logo span { background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-.nav-links { display: flex; gap: 30px; list-style: none; }
+.nav-links { display: flex; gap: 28px; list-style: none; }
 .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; position: relative; transition: color .2s; }
 .nav-links a::after { content: ""; position: absolute; left: 0; bottom: -4px; width: 0; height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent2)); transition: width .25s; border-radius: 2px; }
 .nav-links a:hover { color: var(--text); }
 .nav-links a:hover::after { width: 100%; }
 
-/* HERO */
 .hero { min-height: 100vh; display: flex; align-items: center; padding: 120px 0 60px; }
 .hero .container { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 60px; align-items: center; }
 .hero-badge {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 7px 16px; border-radius: 999px;
-  background: rgba(34,211,238,0.1); border: 1px solid rgba(34,211,238,0.25);
-  color: var(--accent); font-size: 13px; font-weight: 600; margin-bottom: 22px;
+  background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.25);
+  color: var(--green); font-size: 13px; font-weight: 600; margin-bottom: 22px;
 }
-.hero-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px var(--accent); animation: pulse 2s infinite; }
+.hero-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 12px var(--green); animation: pulse 2s infinite; }
 @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
-.hero h1 { font-size: clamp(38px, 5.5vw, 60px); line-height: 1.08; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 10px; }
+.hero h1 { font-size: clamp(38px, 5.5vw, 58px); line-height: 1.08; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 10px; }
 .hero h1 .grad { background: linear-gradient(135deg, var(--accent), var(--accent2), var(--pink)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; background-size: 200% 200%; animation: gradientShift 6s ease infinite; }
 @keyframes gradientShift { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
 .typewriter { font-size: clamp(17px, 2.5vw, 22px); color: var(--muted); font-weight: 500; min-height: 32px; margin-bottom: 22px; }
 .typewriter .cursor { color: var(--accent); animation: blink 1s step-end infinite; }
 @keyframes blink { 50% { opacity: 0; } }
-.hero p.lead { color: var(--muted); font-size: 16px; max-width: 540px; margin-bottom: 32px; }
+.hero p.lead { color: var(--muted); font-size: 16px; max-width: 560px; margin-bottom: 32px; }
 .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 44px; }
 .btn {
   display: inline-block; padding: 13px 28px; border-radius: 12px;
   font-weight: 600; font-size: 14.5px; text-decoration: none; cursor: pointer;
-  border: none; transition: transform .2s, box-shadow .2s, background .2s; position: relative; overflow: hidden;
+  border: none; transition: transform .2s, box-shadow .2s, background .2s;
 }
-.btn-primary {
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  color: #071018; box-shadow: 0 6px 24px rgba(34,211,238,0.25);
-}
+.btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #071018; box-shadow: 0 6px 24px rgba(34,211,238,0.25); }
 .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(129,140,248,0.35); }
-.btn-ghost {
-  background: rgba(255,255,255,0.05); border: 1px solid var(--card-border);
-  color: var(--text); backdrop-filter: blur(8px);
-}
+.btn-ghost { background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: var(--text); backdrop-filter: blur(8px); }
 .btn-ghost:hover { background: rgba(255,255,255,0.1); transform: translateY(-3px); }
 
 .hero-stats { display: flex; gap: 44px; }
@@ -123,17 +115,15 @@ nav .container { display: flex; align-items: center; justify-content: space-betw
 .float-chip.c2 { bottom: 12%; right: -20px; color: var(--accent2); }
 .float-chip.c3 { bottom: 30%; left: -34px; color: var(--pink); }
 
-/* scroll reveal */
 .reveal { opacity: 0; transform: translateY(36px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
-/* SECTIONS */
 section { padding: 90px 0; position: relative; }
 .section-label { display: flex; align-items: center; gap: 12px; color: var(--accent); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
 .section-label::before { content: ""; width: 34px; height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent2)); border-radius: 2px; }
 .section-title { font-size: clamp(26px, 3.5vw, 38px); font-weight: 800; margin-bottom: 44px; letter-spacing: -0.5px; }
+.section-sub { color: var(--muted); font-size: 15.5px; max-width: 680px; margin: -28px 0 44px; }
 
-/* SOBRE */
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
 .about-text p { color: var(--muted); margin-bottom: 16px; font-size: 15.5px; }
 .about-text .hl { color: var(--text); font-weight: 600; }
@@ -148,6 +138,25 @@ section { padding: 90px 0; position: relative; }
 .info-card h4 { font-size: 13px; color: var(--accent); margin-bottom: 2px; text-transform: uppercase; letter-spacing: 1px; }
 .info-card p { font-size: 14px; color: var(--muted); }
 
+/* EXPERTISE */
+.expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.expertise-card {
+  background: var(--card); border: 1px solid var(--card-border); border-radius: 16px;
+  padding: 24px; backdrop-filter: blur(8px); position: relative; overflow: hidden;
+  transition: transform .25s, border-color .25s, box-shadow .25s;
+}
+.expertise-card::before {
+  content: ""; position: absolute; top: -60%; right: -40%; width: 220px; height: 220px;
+  border-radius: 50%; background: radial-gradient(circle, rgba(34,211,238,0.13), transparent 70%);
+  transition: opacity .3s; opacity: 0;
+}
+.expertise-card:hover { transform: translateY(-6px); border-color: rgba(34,211,238,0.35); box-shadow: 0 18px 50px rgba(0,0,0,0.4); }
+.expertise-card:hover::before { opacity: 1; }
+.expertise-card .ic { font-size: 26px; margin-bottom: 12px; display: inline-block; }
+.expertise-card h4 { font-size: 16px; margin-bottom: 8px; }
+.expertise-card p { font-size: 13.5px; color: var(--muted); margin-bottom: 12px; }
+.expertise-card .tag-line { font-size: 12px; color: var(--accent2); font-weight: 600; }
+
 /* SKILLS */
 .skills-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .skill-item {
@@ -156,10 +165,9 @@ section { padding: 90px 0; position: relative; }
   display: flex; align-items: center; gap: 10px; transition: transform .2s, border-color .2s, background .2s;
 }
 .skill-item:hover { transform: translateY(-3px); border-color: rgba(129,140,248,0.4); background: rgba(255,255,255,0.06); }
-.skill-item::before { content: "⚡"; font-size: 13px; }
+.skill-item::before { content: "▸"; font-size: 13px; color: var(--accent); }
 .skill-item b { color: var(--text); }
 
-/* TIMELINE */
 .timeline { position: relative; padding-left: 30px; }
 .timeline::before { content: ""; position: absolute; left: 7px; top: 6px; bottom: 6px; width: 2px; background: linear-gradient(180deg, var(--accent), var(--accent2), var(--pink)); opacity: 0.5; }
 .tl-item { position: relative; margin-bottom: 38px; }
@@ -176,7 +184,6 @@ section { padding: 90px 0; position: relative; }
 .tl-item ul li { color: var(--muted); font-size: 14.5px; padding: 4px 0 4px 22px; position: relative; }
 .tl-item ul li::before { content: "▸"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
 
-/* CARDS */
 .cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .glow-card {
   background: var(--card); border: 1px solid var(--card-border); border-radius: 18px;
@@ -196,7 +203,6 @@ section { padding: 90px 0; position: relative; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .tag { font-size: 11px; background: rgba(34,211,238,0.1); color: var(--accent); padding: 3px 10px; border-radius: 999px; font-weight: 600; border: 1px solid rgba(34,211,238,0.2); }
 
-/* CONTACT */
 .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .contact-card {
   background: var(--card); border: 1px solid var(--card-border); border-radius: 18px;
@@ -217,14 +223,14 @@ footer .heart { color: var(--pink); }
   .hero p.lead { margin-left: auto; margin-right: auto; }
   .hero-cta, .hero-stats { justify-content: center; }
   .hero-stats { gap: 28px; }
-  .cards-grid, .contact-grid { grid-template-columns: 1fr 1fr; }
+  .cards-grid, .contact-grid, .expertise-grid { grid-template-columns: 1fr 1fr; }
   .photo-wrap { margin-top: 40px; }
   .float-chip.c1 { left: 0; } .float-chip.c2 { right: 0; } .float-chip.c3 { left: 0; }
 }
 @media (max-width: 600px) {
   .nav-links { display: none; }
   .skills-wrap { grid-template-columns: 1fr; }
-  .cards-grid, .contact-grid { grid-template-columns: 1fr; }
+  .cards-grid, .contact-grid, .expertise-grid { grid-template-columns: 1fr; }
   .hero { padding-top: 110px; }
   .blobs { opacity: 0.5; }
 }
@@ -240,9 +246,10 @@ footer .heart { color: var(--pink); }
     <div class="logo">Vinicius<span>.Passos</span></div>
     <ul class="nav-links">
       <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#expertise">Expertise</a></li>
       <li><a href="#habilidades">Skills</a></li>
       <li><a href="#experiencia">Trajetória</a></li>
-      <li><a href="#realizacoes">Destaques</a></li>
+      <li><a href="#realizacoes">Projetos</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
   </div>
@@ -254,23 +261,23 @@ footer .heart { color: var(--pink); }
       <span class="hero-badge"><span class="dot"></span> Disponível para oportunidades</span>
       <h1>Vinicius <span class="grad">Passos</span></h1>
       <div class="typewriter"><span id="typed"></span><span class="cursor">|</span></div>
-      <p class="lead">Arquiteto de microsserviços em .NET com 4 anos de experiência construindo sistemas distribuídos de alta disponibilidade — processando milhares de eventos por minuto, em tempo real, para milhares de usuários.</p>
+      <p class="lead">Desenvolvedor Back-End .NET com 4 anos construindo sistemas distribuídos de ponta a ponta: microsserviços, integração com hardware físico, biometria, câmeras, alarmes, IA, mensageria e distribuição em tempo real.</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#contato">Vamos conversar</a>
-        <a class="btn btn-ghost" href="#realizacoes">Ver destaques</a>
+        <a class="btn btn-ghost" href="#expertise">O que eu faço</a>
       </div>
       <div class="hero-stats">
         <div class="stat"><b><span class="counter" data-target="4">0</span>+</b><span>anos de experiência</span></div>
         <div class="stat"><b><span class="counter" data-target="15">0</span>+</b><span>microsserviços</span></div>
-        <div class="stat"><b><span class="counter" data-target="1000">0</span>k+</b><span>eventos/dia</span></div>
+        <div class="stat"><b><span class="counter" data-target="10">0</span>+</b><span>fabricantes integrados</span></div>
       </div>
     </div>
     <div class="hero-photo">
       <div class="photo-ring"></div>
       <div class="photo-wrap"><img src="vinicius-foto.jpg" alt="Vinicius Passos"></div>
-      <div class="float-chip c1">⚡ .NET Back-End</div>
-      <div class="float-chip c2">🔌 Multi-fabricante</div>
-      <div class="float-chip c3">🛰️ Tempo real</div>
+      <div class="float-chip c1">⚙️ .NET & Microsserviços</div>
+      <div class="float-chip c2">🔌 Hardware Multi-fabricante</div>
+      <div class="float-chip c3">🧠 IA & Integrações</div>
     </div>
   </div>
 </header>
@@ -280,14 +287,14 @@ footer .heart { color: var(--pink); }
     <div class="section-label">Sobre</div>
     <div class="about-grid">
       <div class="about-text reveal">
-        <h2 class="section-title">Engenheiro de software focado em <span class="grad" style="background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">sistemas de tempo real</span></h2>
-        <p>Especialista em <span class="hl">arquitetura de microsserviços</span> e <span class="hl">integração multi-fabricante</span>, atuando desde a captura de eventos em hardware físico até a distribuição em tempo real via SignalR, SSE e WebSockets.</p>
-        <p>Domínio de <span class="hl">protocolos proprietários</span> (CAN Bus, HTTP Digest, CGI, binário via socket), mensageria assíncrona, persistência híbrida e observabilidade completa.</p>
-        <p>Atuação <span class="hl">end-to-end</span>: arquitetura, implementação, testes e operação em ambientes containerizados.</p>
+        <h2 class="section-title">Engenheiro de software <span style="background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">fim a fim</span></h2>
+        <p>Atuo em todas as camadas: da <span class="hl">captura de eventos em hardware físico</span> (controladoras de acesso, catracas, câmeras, centrais de alarme) até a <span class="hl">experiência em tempo real</span> para milhares de usuários.</p>
+        <p>Domínio de <span class="hl">protocolos proprietários e SDKs nativos</span> de múltiplos fabricantes, mensageria assíncrona, persistência híbrida (relacional + NoSQL) e observabilidade completa.</p>
+        <p>Também desenvolvo <span class="hl">soluções de IA e voz</span> (assistente por voz, WhatsApp), <span class="hl">aplicações desktop</span> (Windows Forms) e <span class="hl">workers</span> de captura e sincronização contínua de eventos.</p>
       </div>
       <div class="about-cards reveal">
         <div class="info-card"><div class="ic">📍</div><div><h4>Localização</h4><p>São Paulo, SP — Trabalho remoto</p></div></div>
-        <div class="info-card"><div class="ic">🧩</div><div><h4>Especialidades</h4><p>.NET, Microsserviços, Tempo Real, Integração Hardware, Mensageria</p></div></div>
+        <div class="info-card"><div class="ic">🧩</div><div><h4>Especialidades</h4><p>Microsserviços, Hardware, Biometria, Câmeras, Alarmes, IA, Tempo Real</p></div></div>
         <div class="info-card"><div class="ic">🎓</div><div><h4>Educação</h4><p>Bacharelado em Ciência da Computação — UNICSUL (2021)</p></div></div>
         <div class="info-card"><div class="ic">🌎</div><div><h4>Idiomas</h4><p>Português (nativo) · Inglês (intermediário-avançado)</p></div></div>
       </div>
@@ -295,7 +302,29 @@ footer .heart { color: var(--pink); }
   </div>
 </section>
 
-<section id="habilidades" style="background: var(--bg2);">
+<section id="expertise" style="background: var(--bg2);">
+  <div class="container">
+    <div class="section-label">Expertise</div>
+    <h2 class="section-title reveal">O que eu faço</h2>
+    <p class="section-sub reveal">Back-end .NET aplicado a sistemas físicos e distribuídos — do hardware à nuvem.</p>
+    <div class="expertise-grid">
+      <div class="expertise-card reveal"><span class="ic">🏗️</span><h4>Microsserviços .NET</h4><p>Arquitetura e evolução de 15+ microsserviços com Clean Architecture, comunicação assíncrona e bancos híbridos.</p><span class="tag-line">.NET 7-10 · MongoDB · Docker · Dapper</span></div>
+      <div class="expertise-card reveal"><span class="ic">🔌</span><h4>Integração de Hardware</h4><p>Comunicação com controladoras de acesso, catracas, câmeras e alarmes via SDKs nativos, TCP e protocolos proprietários.</p><span class="tag-line">ZKTeco · Intelbras · Hikvision · ControlID · NICE</span></div>
+      <div class="expertise-card reveal"><span class="ic">🫆</span><h4>Biometria & Credenciais</h4><p>Gestão de tags RFID, biometria facial e digital e controles remotos, com sincronização e exportação cruzada entre fabricantes.</p><span class="tag-line">RFID · Facial · Digital · Multi-fabricante</span></div>
+      <div class="expertise-card reveal"><span class="ic">🎥</span><h4>Câmeras & Streaming</h4><p>Gestão de dispositivos de vídeo, integração com DVRs e serviços de streaming em alta escala.</p><span class="tag-line">DVR · Streaming · ISAPI · CGI</span></div>
+      <div class="expertise-card reveal"><span class="ic">🚨</span><h4>Alarmes & Sensores</h4><p>Processamento de eventos de centrais de alarme, zonas, partições e acionamentos programáveis.</p><span class="tag-line">PGMs · Zonas · Contact ID · TCP</span></div>
+      <div class="expertise-card reveal"><span class="ic">⚡</span><h4>Tempo Real</h4><p>Distribuição de eventos para milhares de clientes simultâneos com alta disponibilidade multi-instância.</p><span class="tag-line">SignalR · Redis Backplane · WebSockets · SSE</span></div>
+      <div class="expertise-card reveal"><span class="ic">🧠</span><h4>IA & Voz</h4><p>Assistentes por voz, síntese de fala e integração com WhatsApp para automação de atendimento.</p><span class="tag-line">Vapi · 11Labs · WhatsApp API</span></div>
+      <div class="expertise-card reveal"><span class="ic">📨</span><h4>Mensageria & Jobs</h4><p>Processamento distribuído com filas, eventos e jobs agendados em background.</p><span class="tag-line">RabbitMQ · MassTransit · Hangfire</span></div>
+      <div class="expertise-card reveal"><span class="ic">🖥️</span><h4>Desktop & Workers</h4><p>Aplicações desktop para cadastro biométrico e workers de captura/sincronização contínua de eventos.</p><span class="tag-line">Windows Forms · Worker Services · SDKs nativos</span></div>
+      <div class="expertise-card reveal"><span class="ic">🔗</span><h4>BFF & SIP/VoIP</h4><p>Backend-for-Frontend com suporte a voz sobre IP, videoporteiros e terminais de acesso.</p><span class="tag-line">SIPSorcery · MediatR · WebSocket</span></div>
+      <div class="expertise-card reveal"><span class="ic">📊</span><h4>Observabilidade</h4><p>Métricas, logs estruturados e monitoramento de APIs e workers em produção.</p><span class="tag-line">Prometheus · Grafana · Serilog · OpenTelemetry</span></div>
+      <div class="expertise-card reveal"><span class="ic">🔐</span><h4>Segurança & Auth</h4><p>Autenticação e autorização em APIs: JWT, Basic Auth e OAuth2.</p><span class="tag-line">JWT · OAuth2 · Refit · FluentValidation</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="habilidades">
   <div class="container">
     <div class="section-label">Stack</div>
     <h2 class="section-title reveal">Habilidades Técnicas</h2>
@@ -314,13 +343,14 @@ footer .heart { color: var(--pink); }
       <div class="skill-item"><b>Testes:</b> NUnit, Testes de Integração</div>
       <div class="skill-item"><b>Protocolos:</b> TCP/IP, SIP/VoIP, WebSocket, CAN Bus, HTTP Digest, CGI, binário</div>
       <div class="skill-item"><b>Hardware:</b> ZKTeco, Intelbras, Hikvision, ControlID, NICE, Anviz, SIAM</div>
+      <div class="skill-item"><b>Biometria:</b> Facial, Digital/Impressão, RFID, Controles Remotos</div>
       <div class="skill-item"><b>IA/Voz:</b> Vapi AI, 11Labs, Evolution API (WhatsApp)</div>
       <div class="skill-item"><b>Desktop:</b> Windows Forms (.NET 4.8)</div>
     </div>
   </div>
 </section>
 
-<section id="experiencia">
+<section id="experiencia" style="background: var(--bg2);">
   <div class="container">
     <div class="section-label">Trajetória</div>
     <h2 class="section-title reveal">Experiência Profissional</h2>
@@ -332,6 +362,7 @@ footer .heart { color: var(--pink); }
         <ul>
           <li>Projetei e implementei mais de <b>15 microsserviços</b> (.NET 8/10) cobrindo câmeras, alarmes, entregas, relatórios, IA, chatbot, BFF e notificações em tempo real</li>
           <li>Processamento de milhares de eventos/min via <b>Sockets TCP</b> com equipamentos multi-fabricante</li>
+          <li>Gestão de credenciais: <b>tags RFID, biometria facial/digital, controles remotos</b> com sincronização entre fabricantes</li>
           <li>Distribuição em tempo real com <b>SignalR + Redis Backplane</b> e <b>SSE</b> para milhares de clientes simultâneos</li>
           <li>Mensageria assíncrona com <b>RabbitMQ</b> e <b>MassTransit</b>; jobs com <b>Hangfire</b></li>
           <li>Persistência híbrida: SQL Server, MySQL, PostgreSQL, MongoDB + Redis</li>
@@ -360,22 +391,26 @@ footer .heart { color: var(--pink); }
   </div>
 </section>
 
-<section id="realizacoes" style="background: var(--bg2);">
+<section id="realizacoes">
   <div class="container">
-    <div class="section-label">Destaques</div>
-    <h2 class="section-title reveal">Realizações Técnicas</h2>
+    <div class="section-label">Projetos</div>
+    <h2 class="section-title reveal">O que já entreguei</h2>
+    <p class="section-sub reveal">Sistemas distribuídos em produção, processando eventos de hardware em tempo real.</p>
     <div class="cards-grid">
-      <div class="glow-card reveal"><span class="ic">⚙️</span><h4>Microsserviços em .NET</h4><p>Projeto e evolução de +15 microsserviços em Clean Architecture com comunicação assíncrona e bancos híbridos.</p><div class="tags"><span class="tag">.NET</span><span class="tag">Clean Arch</span><span class="tag">MongoDB</span><span class="tag">Docker</span></div></div>
-      <div class="glow-card reveal"><span class="ic">⚡</span><h4>Eventos em Tempo Real</h4><p>Captura de eventos de hardware e distribuição em tempo real para milhares de clientes, com alta disponibilidade.</p><div class="tags"><span class="tag">SignalR</span><span class="tag">Redis Backplane</span><span class="tag">WebSockets</span><span class="tag">SSE</span></div></div>
-      <div class="glow-card reveal"><span class="ic">🔌</span><h4>Integração Multi-Fabricante</h4><p>Integração com equipamentos de controle de acesso via SDKs nativos, protocolos proprietários e APIs HTTP/CGI.</p><div class="tags"><span class="tag">SDKs nativos</span><span class="tag">TCP/IP</span><span class="tag">CAN Bus</span><span class="tag">HTTP Digest</span></div></div>
-      <div class="glow-card reveal"><span class="ic">📨</span><h4>Filas e Assíncrono</h4><p>Orquestração de jobs em background e consumo de mensageria para processamento distribuído.</p><div class="tags"><span class="tag">RabbitMQ</span><span class="tag">MassTransit</span><span class="tag">Hangfire</span></div></div>
-      <div class="glow-card reveal"><span class="ic">🔗</span><h4>BFF e Integrações</h4><p>Backend-for-Frontend com suporte a SIP/VoIP e WebSocket.</p><div class="tags"><span class="tag">MediatR</span><span class="tag">SIPSorcery</span><span class="tag">WebSocket</span></div></div>
-      <div class="glow-card reveal"><span class="ic">📊</span><h4>Observabilidade</h4><p>Métricas, logs estruturados e monitoramento de APIs e workers.</p><div class="tags"><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">Serilog</span><span class="tag">OpenTelemetry</span></div></div>
+      <div class="glow-card reveal"><span class="ic">🏗️</span><h4>Plataforma de Microsserviços</h4><p>15+ microsserviços em Clean Architecture com comunicação assíncrona, bancos híbridos e deploy em Docker Swarm.</p><div class="tags"><span class="tag">.NET</span><span class="tag">MongoDB</span><span class="tag">RabbitMQ</span><span class="tag">Docker</span></div></div>
+      <div class="glow-card reveal"><span class="ic">🔌</span><h4>Hub de Dispositivos</h4><p>Gerenciamento unificado de tags RFID, biometria facial/digital, controles remotos e sincronização multi-fabricante.</p><div class="tags"><span class="tag">RFID</span><span class="tag">Biometria</span><span class="tag">Multi-fabricante</span></div></div>
+      <div class="glow-card reveal"><span class="ic">⚡</span><h4>Distribuição em Tempo Real</h4><p>Eventos entregues para milhares de clientes simultâneos com alta disponibilidade em múltiplas instâncias.</p><div class="tags"><span class="tag">SignalR</span><span class="tag">Redis Backplane</span><span class="tag">SSE</span></div></div>
+      <div class="glow-card reveal"><span class="ic">🧠</span><h4>Assistente de IA & Voz</h4><p>Assistente por voz com síntese de fala e integração com WhatsApp para automação de atendimento.</p><div class="tags"><span class="tag">Vapi</span><span class="tag">11Labs</span><span class="tag">WhatsApp</span></div></div>
+      <div class="glow-card reveal"><span class="ic">🎥</span><h4>Plataforma de Câmeras</h4><p>Gestão de dispositivos de vídeo com integração a DVRs e serviços de streaming.</p><div class="tags"><span class="tag">DVR</span><span class="tag">Streaming</span><span class="tag">Refit</span></div></div>
+      <div class="glow-card reveal"><span class="ic">🚨</span><h4>Monitoramento de Alarmes</h4><p>Processamento de eventos de centrais de alarme com notificação em tempo real.</p><div class="tags"><span class="tag">Alarmes</span><span class="tag">Zonas</span><span class="tag">PGMs</span></div></div>
+      <div class="glow-card reveal"><span class="ic">🖥️</span><h4>Sincronizador de Catracas</h4><p>Sincronização bidirecional com catracas via SDK nativo + cadastro biométrico desktop.</p><div class="tags"><span class="tag">ZKTeco SDK</span><span class="tag">WinForms</span><span class="tag">Workers</span></div></div>
+      <div class="glow-card reveal"><span class="ic">🔗</span><h4>BFF com SIP/VoIP</h4><p>Backend-for-Frontend com chamadas de voz e WebSocket.</p><div class="tags"><span class="tag">SIPSorcery</span><span class="tag">MediatR</span><span class="tag">WebSocket</span></div></div>
+      <div class="glow-card reveal"><span class="ic">📊</span><h4>Observabilidade</h4><p>Métricas, logs estruturados e monitoramento de APIs e workers.</p><div class="tags"><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">OpenTelemetry</span></div></div>
     </div>
   </div>
 </section>
 
-<section id="contato">
+<section id="contato" style="background: var(--bg2);">
   <div class="container">
     <div class="section-label">Contato</div>
     <h2 class="section-title reveal">Vamos conversar?</h2>
@@ -398,12 +433,10 @@ footer .heart { color: var(--pink); }
 </footer>
 
 <script>
-// navbar scroll
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
 
-// typewriter
-const roles = ['Desenvolvedor Back-End .NET', 'Arquiteto de Microsserviços', 'Especialista em Tempo Real', 'Integração Multi-Fabricante'];
+const roles = ['Desenvolvedor Back-End .NET', 'Microsserviços & Arquitetura', 'Integração de Hardware Multi-fabricante', 'Biometria & Credenciais', 'Câmeras & Alarmes', 'IA, Voz & Integrações'];
 const typedEl = document.getElementById('typed');
 let ri = 0, ci = 0, deleting = false;
 function type() {
@@ -416,13 +449,11 @@ function type() {
 }
 type();
 
-// scroll reveal
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// counters
 const counterObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (!e.isIntersecting) return;
