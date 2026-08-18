@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vinicius Passos | Desenvolvedor .NET Back-End</title>
-<meta name="description" content="Desenvolvedor Back-End .NET. Microsserviços, integração de hardware multi-fabricante, biometria, IA, tempo real e observabilidade.">
+<title>Vinicius Passos | .NET Back-End Developer</title>
+<meta name="description" content=".NET Back-End developer. Microservices, multi-vendor hardware integration, biometrics, AI, real-time and observability.">
 <style>
 :root {
   --bg: #0a0e17;
@@ -46,17 +46,6 @@ body {
   background-size: 44px 44px;
   mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 20%, transparent 75%);
 }
-
-.lang-toggle { position: fixed; right: 24px; bottom: 24px; z-index: 60; }
-.lang-toggle a {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 10px 18px; border-radius: 999px;
-  background: rgba(15,21,36,0.9); backdrop-filter: blur(10px);
-  border: 1px solid var(--card-border); color: var(--text);
-  font-size: 13px; font-weight: 600; text-decoration: none;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.4); transition: transform .2s, border-color .2s;
-}
-.lang-toggle a:hover { transform: translateY(-2px); border-color: rgba(34,211,238,0.4); }
 
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; transition: background .3s, border-color .3s; border-bottom: 1px solid transparent; }
 nav.scrolled { background: rgba(10,14,23,0.8); backdrop-filter: blur(12px); border-color: rgba(255,255,255,0.07); }
@@ -149,7 +138,6 @@ section { padding: 90px 0; position: relative; }
 .info-card h4 { font-size: 13px; color: var(--accent); margin-bottom: 2px; text-transform: uppercase; letter-spacing: 1px; }
 .info-card p { font-size: 14px; color: var(--muted); }
 
-/* EXPERTISE */
 .expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .expertise-card {
   background: var(--card); border: 1px solid var(--card-border); border-radius: 16px;
@@ -168,7 +156,6 @@ section { padding: 90px 0; position: relative; }
 .expertise-card p { font-size: 13.5px; color: var(--muted); margin-bottom: 12px; }
 .expertise-card .tag-line { font-size: 12px; color: var(--accent2); font-weight: 600; }
 
-/* SKILLS */
 .skills-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .skill-item {
   background: var(--card); border: 1px solid var(--card-border); border-radius: 12px;
@@ -228,6 +215,17 @@ section { padding: 90px 0; position: relative; }
 footer { border-top: 1px solid rgba(255,255,255,0.07); padding: 32px 0; text-align: center; color: var(--muted); font-size: 13px; }
 footer .heart { color: var(--pink); }
 
+.lang-toggle { position: fixed; right: 24px; bottom: 24px; z-index: 60; }
+.lang-toggle a {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 18px; border-radius: 999px;
+  background: rgba(15,21,36,0.9); backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border); color: var(--text);
+  font-size: 13px; font-weight: 600; text-decoration: none;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4); transition: transform .2s, border-color .2s;
+}
+.lang-toggle a:hover { transform: translateY(-2px); border-color: rgba(34,211,238,0.4); }
+
 @media (max-width: 900px) {
   .hero .container, .about-grid { grid-template-columns: 1fr; }
   .hero { text-align: center; }
@@ -256,12 +254,12 @@ footer .heart { color: var(--pink); }
   <div class="container">
     <div class="logo">Vinicius<span>.Passos</span></div>
     <ul class="nav-links">
-      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#expertise">Expertise</a></li>
-      <li><a href="#habilidades">Skills</a></li>
-      <li><a href="#experiencia">Trajetória</a></li>
-      <li><a href="#realizacoes">Projetos</a></li>
-      <li><a href="#contato">Contato</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Career</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
 </nav>
@@ -269,45 +267,45 @@ footer .heart { color: var(--pink); }
 <header class="hero">
   <div class="container">
     <div>
-      <span class="hero-badge"><span class="dot"></span> Disponível para oportunidades</span>
+      <span class="hero-badge"><span class="dot"></span> Available for opportunities</span>
       <h1>Vinicius <span class="grad">Passos</span></h1>
       <div class="typewriter"><span id="typed"></span><span class="cursor">|</span></div>
-      <p class="lead">Desenvolvedor Back-End .NET com 4 anos construindo sistemas distribuídos de ponta a ponta: microsserviços, integração com hardware físico, biometria, câmeras, alarmes, IA, mensageria e distribuição em tempo real.</p>
+      <p class="lead">.NET Back-End developer with 4 years building distributed systems end-to-end: microservices, physical hardware integration, biometrics, cameras, alarms, AI, messaging and real-time distribution.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="#contato">Vamos conversar</a>
-        <a class="btn btn-ghost" href="#expertise">O que eu faço</a>
+        <a class="btn btn-primary" href="#contact">Let's talk</a>
+        <a class="btn btn-ghost" href="#expertise">What I do</a>
       </div>
       <div class="hero-stats">
-        <div class="stat"><b><span class="counter" data-target="4">0</span>+</b><span>anos de experiência</span></div>
-        <div class="stat"><b><span class="counter" data-target="15">0</span>+</b><span>microsserviços</span></div>
-        <div class="stat"><b><span class="counter" data-target="10">0</span>+</b><span>fabricantes integrados</span></div>
+        <div class="stat"><b><span class="counter" data-target="4">0</span>+</b><span>years of experience</span></div>
+        <div class="stat"><b><span class="counter" data-target="15">0</span>+</b><span>microservices</span></div>
+        <div class="stat"><b><span class="counter" data-target="10">0</span>+</b><span>vendors integrated</span></div>
       </div>
     </div>
     <div class="hero-photo">
       <div class="photo-ring"></div>
       <div class="photo-wrap"><img src="vinicius-foto.jpg" alt="Vinicius Passos"></div>
-      <div class="float-chip c1">⚙️ .NET & Microsserviços</div>
-      <div class="float-chip c2">🔌 Hardware Multi-fabricante</div>
-      <div class="float-chip c3">🧠 IA & Integrações</div>
+      <div class="float-chip c1">⚙️ .NET & Microservices</div>
+      <div class="float-chip c2">🔌 Multi-vendor Hardware</div>
+      <div class="float-chip c3">🧠 AI & Integrations</div>
     </div>
   </div>
 </header>
 
-<section id="sobre">
+<section id="about">
   <div class="container">
-    <div class="section-label">Sobre</div>
+    <div class="section-label">About</div>
     <div class="about-grid">
       <div class="about-text reveal">
-        <h2 class="section-title">Engenheiro de software <span style="background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">fim a fim</span></h2>
-        <p>Atuo em todas as camadas: da <span class="hl">captura de eventos em hardware físico</span> (controladoras de acesso, catracas, câmeras, centrais de alarme) até a <span class="hl">experiência em tempo real</span> para milhares de usuários.</p>
-        <p>Domínio de <span class="hl">protocolos proprietários e SDKs nativos</span> de múltiplos fabricantes, mensageria assíncrona, persistência híbrida (relacional + NoSQL) e observabilidade completa.</p>
-        <p>Também desenvolvo <span class="hl">soluções de IA e voz</span> (assistente por voz, WhatsApp), <span class="hl">aplicações desktop</span> (Windows Forms) e <span class="hl">workers</span> de captura e sincronização contínua de eventos.</p>
+        <h2 class="section-title">Software engineer <span style="background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">end to end</span></h2>
+        <p>I work across every layer: from <span class="hl">capturing events from physical hardware</span> (access controllers, turnstiles, cameras, alarm panels) to the <span class="hl">real-time experience</span> for thousands of users.</p>
+        <p>Strong command of <span class="hl">proprietary protocols and native SDKs</span> from multiple vendors, async messaging, hybrid persistence (relational + NoSQL) and full observability.</p>
+        <p>I also build <span class="hl">AI and voice solutions</span> (voice assistant, WhatsApp), <span class="hl">desktop applications</span> (Windows Forms) and <span class="hl">workers</span> for continuous event capture and sync.</p>
       </div>
       <div class="about-cards reveal">
-        <div class="info-card"><div class="ic">📍</div><div><h4>Localização</h4><p>Guarulhos, SP — Trabalho remoto</p></div></div>
-        <div class="info-card"><div class="ic">🧩</div><div><h4>Especialidades</h4><p>Microsserviços, Hardware, Biometria, Câmeras, Alarmes, IA, Tempo Real</p></div></div>
-        <div class="info-card"><div class="ic">🎓</div><div><h4>Educação</h4><p>Bacharelado em Ciência da Computação — UNICSUL (2021)</p></div></div>
-        <div class="info-card"><div class="ic">🌎</div><div><h4>Idiomas</h4><p>Português (nativo) · Inglês (intermediário-avançado)</p></div></div>
+        <div class="info-card"><div class="ic">📍</div><div><h4>Location</h4><p>Guarulhos, SP, Brazil — Remote</p></div></div>
+        <div class="info-card"><div class="ic">🧩</div><div><h4>Specialties</h4><p>Microservices, Hardware, Biometrics, Cameras, Alarms, AI, Real-time</p></div></div>
+        <div class="info-card"><div class="ic">🎓</div><div><h4>Education</h4><p>B.Sc. Computer Science — UNICSUL (2021)</p></div></div>
+        <div class="info-card"><div class="ic">🌎</div><div><h4>Languages</h4><p>Portuguese (native) · English (intermediate-advanced)</p></div></div>
       </div>
     </div>
   </div>
@@ -316,121 +314,121 @@ footer .heart { color: var(--pink); }
 <section id="expertise" style="background: var(--bg2);">
   <div class="container">
     <div class="section-label">Expertise</div>
-    <h2 class="section-title reveal">O que eu faço</h2>
-    <p class="section-sub reveal">Back-end .NET aplicado a sistemas físicos e distribuídos — do hardware à nuvem.</p>
+    <h2 class="section-title reveal">What I do</h2>
+    <p class="section-sub reveal">.NET back-end applied to physical and distributed systems — from hardware to the cloud.</p>
     <div class="expertise-grid">
-      <div class="expertise-card reveal"><span class="ic">🏗️</span><h4>Microsserviços .NET</h4><p>Arquitetura e evolução de 15+ microsserviços com Clean Architecture, comunicação assíncrona e bancos híbridos.</p><span class="tag-line">.NET 7-10 · MongoDB · Docker · Dapper</span></div>
-      <div class="expertise-card reveal"><span class="ic">🔌</span><h4>Integração de Hardware</h4><p>Comunicação com controladoras de acesso, catracas, câmeras e alarmes via SDKs nativos, TCP e protocolos proprietários.</p><span class="tag-line">ZKTeco · Intelbras · Hikvision · ControlID · NICE</span></div>
-      <div class="expertise-card reveal"><span class="ic">🫆</span><h4>Biometria & Credenciais</h4><p>Gestão de tags RFID, biometria facial e digital e controles remotos, com sincronização e exportação cruzada entre fabricantes.</p><span class="tag-line">RFID · Facial · Digital · Multi-fabricante</span></div>
-      <div class="expertise-card reveal"><span class="ic">🎥</span><h4>Câmeras & Streaming</h4><p>Gestão de dispositivos de vídeo, integração com DVRs e serviços de streaming em alta escala.</p><span class="tag-line">DVR · Streaming · ISAPI · CGI</span></div>
-      <div class="expertise-card reveal"><span class="ic">🚨</span><h4>Alarmes & Sensores</h4><p>Processamento de eventos de centrais de alarme, zonas, partições e acionamentos programáveis.</p><span class="tag-line">PGMs · Zonas · Contact ID · TCP</span></div>
-      <div class="expertise-card reveal"><span class="ic">⚡</span><h4>Tempo Real</h4><p>Distribuição de eventos para milhares de clientes simultâneos com alta disponibilidade multi-instância.</p><span class="tag-line">SignalR · Redis Backplane · WebSockets · SSE</span></div>
-      <div class="expertise-card reveal"><span class="ic">🧠</span><h4>IA & Voz</h4><p>Assistentes por voz, síntese de fala e integração com WhatsApp para automação de atendimento.</p><span class="tag-line">Vapi · 11Labs · WhatsApp API</span></div>
-      <div class="expertise-card reveal"><span class="ic">📨</span><h4>Mensageria & Jobs</h4><p>Processamento distribuído com filas, eventos e jobs agendados em background.</p><span class="tag-line">RabbitMQ · MassTransit · Hangfire</span></div>
-      <div class="expertise-card reveal"><span class="ic">🖥️</span><h4>Desktop & Workers</h4><p>Aplicações desktop para cadastro biométrico e workers de captura/sincronização contínua de eventos.</p><span class="tag-line">Windows Forms · Worker Services · SDKs nativos</span></div>
-      <div class="expertise-card reveal"><span class="ic">🔗</span><h4>BFF & SIP/VoIP</h4><p>Backend-for-Frontend com suporte a voz sobre IP, videoporteiros e terminais de acesso.</p><span class="tag-line">SIPSorcery · MediatR · WebSocket</span></div>
-      <div class="expertise-card reveal"><span class="ic">📊</span><h4>Observabilidade</h4><p>Métricas, logs estruturados e monitoramento de APIs e workers em produção.</p><span class="tag-line">Prometheus · Grafana · Serilog · OpenTelemetry</span></div>
-      <div class="expertise-card reveal"><span class="ic">🔐</span><h4>Segurança & Auth</h4><p>Autenticação e autorização em APIs: JWT, Basic Auth e OAuth2.</p><span class="tag-line">JWT · OAuth2 · Refit · FluentValidation</span></div>
+      <div class="expertise-card reveal"><span class="ic">🏗️</span><h4>.NET Microservices</h4><p>Architecture and evolution of 15+ microservices with Clean Architecture, async communication and hybrid databases.</p><span class="tag-line">.NET 7-10 · MongoDB · Docker · Dapper</span></div>
+      <div class="expertise-card reveal"><span class="ic">🔌</span><h4>Hardware Integration</h4><p>Communication with access controllers, turnstiles, cameras and alarms via native SDKs, TCP and proprietary protocols.</p><span class="tag-line">ZKTeco · Intelbras · Hikvision · ControlID · NICE</span></div>
+      <div class="expertise-card reveal"><span class="ic">🫆</span><h4>Biometrics & Credentials</h4><p>Management of RFID tags, facial and fingerprint biometrics and remote controls, with cross-vendor sync and export.</p><span class="tag-line">RFID · Facial · Fingerprint · Multi-vendor</span></div>
+      <div class="expertise-card reveal"><span class="ic">🎥</span><h4>Cameras & Streaming</h4><p>Video device management, DVR integration and high-scale streaming services.</p><span class="tag-line">DVR · Streaming · ISAPI · CGI</span></div>
+      <div class="expertise-card reveal"><span class="ic">🚨</span><h4>Alarms & Sensors</h4><p>Event processing from alarm panels, zones, partitions and programmable outputs.</p><span class="tag-line">PGMs · Zones · Contact ID · TCP</span></div>
+      <div class="expertise-card reveal"><span class="ic">⚡</span><h4>Real-time</h4><p>Event distribution to thousands of concurrent clients with multi-instance high availability.</p><span class="tag-line">SignalR · Redis Backplane · WebSockets · SSE</span></div>
+      <div class="expertise-card reveal"><span class="ic">🧠</span><h4>AI & Voice</h4><p>Voice assistants, speech synthesis and WhatsApp integration for automated customer service.</p><span class="tag-line">Vapi · 11Labs · WhatsApp API</span></div>
+      <div class="expertise-card reveal"><span class="ic">📨</span><h4>Messaging & Jobs</h4><p>Distributed processing with queues, events and scheduled background jobs.</p><span class="tag-line">RabbitMQ · MassTransit · Hangfire</span></div>
+      <div class="expertise-card reveal"><span class="ic">🖥️</span><h4>Desktop & Workers</h4><p>Desktop apps for biometric enrollment and workers for continuous event capture and sync.</p><span class="tag-line">Windows Forms · Worker Services · Native SDKs</span></div>
+      <div class="expertise-card reveal"><span class="ic">🔗</span><h4>BFF & SIP/VoIP</h4><p>Backend-for-Frontend with voice-over-IP support, video intercoms and access terminals.</p><span class="tag-line">SIPSorcery · MediatR · WebSocket</span></div>
+      <div class="expertise-card reveal"><span class="ic">📊</span><h4>Observability</h4><p>Metrics, structured logging and monitoring of APIs and workers in production.</p><span class="tag-line">Prometheus · Grafana · Serilog · OpenTelemetry</span></div>
+      <div class="expertise-card reveal"><span class="ic">🔐</span><h4>Security & Auth</h4><p>Authentication and authorization in APIs: JWT, Basic Auth and OAuth2.</p><span class="tag-line">JWT · OAuth2 · Refit · FluentValidation</span></div>
     </div>
   </div>
 </section>
 
-<section id="habilidades">
+<section id="skills">
   <div class="container">
     <div class="section-label">Stack</div>
-    <h2 class="section-title reveal">Habilidades Técnicas</h2>
+    <h2 class="section-title reveal">Technical Skills</h2>
     <div class="skills-wrap reveal">
       <div class="skill-item"><b>Back-End:</b> C# (.NET 7/8/10), ASP.NET Core WebAPI, Minimal APIs, MVC</div>
-      <div class="skill-item"><b>Tempo Real:</b> SignalR, SSE, WebSockets, Sockets TCP, Redis Backplane</div>
-      <div class="skill-item"><b>Mensageria:</b> RabbitMQ, MassTransit, Redis Pub/Sub</div>
-      <div class="skill-item"><b>Agendamento:</b> Hangfire</div>
-      <div class="skill-item"><b>Bancos:</b> SQL Server, MySQL, PostgreSQL, MongoDB, Redis</div>
+      <div class="skill-item"><b>Real-time:</b> SignalR, SSE, WebSockets, TCP Sockets, Redis Backplane</div>
+      <div class="skill-item"><b>Messaging:</b> RabbitMQ, MassTransit, Redis Pub/Sub</div>
+      <div class="skill-item"><b>Scheduling:</b> Hangfire</div>
+      <div class="skill-item"><b>Databases:</b> SQL Server, MySQL, PostgreSQL, MongoDB, Redis</div>
       <div class="skill-item"><b>ORM:</b> EF Core, EF6, Dapper</div>
-      <div class="skill-item"><b>Comunicação:</b> Refit, gRPC, REST</div>
-      <div class="skill-item"><b>Validação:</b> FluentValidation</div>
+      <div class="skill-item"><b>Communication:</b> Refit, gRPC, REST</div>
+      <div class="skill-item"><b>Validation:</b> FluentValidation</div>
       <div class="skill-item"><b>DevOps:</b> Docker, Compose, Swarm, Linux, Nginx</div>
-      <div class="skill-item"><b>Observabilidade:</b> OpenTelemetry, Prometheus, Serilog</div>
+      <div class="skill-item"><b>Observability:</b> OpenTelemetry, Prometheus, Serilog</div>
       <div class="skill-item"><b>Auth:</b> JWT, Basic Auth, OAuth2</div>
-      <div class="skill-item"><b>Testes:</b> NUnit, Testes de Integração</div>
-      <div class="skill-item"><b>Protocolos:</b> TCP/IP, SIP/VoIP, WebSocket, CAN Bus, HTTP Digest, CGI, binário</div>
+      <div class="skill-item"><b>Testing:</b> NUnit, Integration Tests</div>
+      <div class="skill-item"><b>Protocols:</b> TCP/IP, SIP/VoIP, WebSocket, CAN Bus, HTTP Digest, CGI, binary</div>
       <div class="skill-item"><b>Hardware:</b> ZKTeco, Intelbras, Hikvision, ControlID, NICE, Anviz, SIAM</div>
-      <div class="skill-item"><b>Biometria:</b> Facial, Digital/Impressão, RFID, Controles Remotos</div>
-      <div class="skill-item"><b>IA/Voz:</b> Vapi AI, 11Labs, Evolution API (WhatsApp)</div>
+      <div class="skill-item"><b>Biometrics:</b> Facial, Fingerprint, RFID, Remote Controls</div>
+      <div class="skill-item"><b>AI/Voice:</b> Vapi AI, 11Labs, Evolution API (WhatsApp)</div>
       <div class="skill-item"><b>Desktop:</b> Windows Forms (.NET 4.8)</div>
     </div>
   </div>
 </section>
 
-<section id="experiencia" style="background: var(--bg2);">
+<section id="experience" style="background: var(--bg2);">
   <div class="container">
-    <div class="section-label">Trajetória</div>
-    <h2 class="section-title reveal">Experiência Profissional</h2>
+    <div class="section-label">Career</div>
+    <h2 class="section-title reveal">Professional Experience</h2>
     <div class="timeline">
       <div class="tl-item reveal">
         <h3>Folk Portaria Remota</h3>
-        <div class="tl-role">Desenvolvedor Pleno Back-End</div>
-        <div class="tl-date">out/2024 — atual · Remoto · SP</div>
+        <div class="tl-role">Senior Back-End Developer</div>
+        <div class="tl-date">Oct 2024 — present · Remote · SP</div>
         <ul>
-          <li>Projetei e implementei mais de <b>15 microsserviços</b> (.NET 8/10) cobrindo câmeras, alarmes, entregas, relatórios, IA, chatbot, BFF e notificações em tempo real</li>
-          <li>Processamento de milhares de eventos/min via <b>Sockets TCP</b> com equipamentos multi-fabricante</li>
-          <li>Gestão de credenciais: <b>tags RFID, biometria facial/digital, controles remotos</b> com sincronização entre fabricantes</li>
-          <li>Distribuição em tempo real com <b>SignalR + Redis Backplane</b> e <b>SSE</b> para milhares de clientes simultâneos</li>
-          <li>Mensageria assíncrona com <b>RabbitMQ</b> e <b>MassTransit</b>; jobs com <b>Hangfire</b></li>
-          <li>Persistência híbrida: SQL Server, MySQL, PostgreSQL, MongoDB + Redis</li>
-          <li>Monitoramento com <b>OpenTelemetry + Prometheus</b>; containerização com <b>Docker Swarm</b></li>
+          <li>Designed and implemented 15+ microservices (.NET 8/10) covering cameras, alarms, deliveries, reports, AI, chatbot, BFF and real-time notifications</li>
+          <li>Processing thousands of events/min via <b>TCP Sockets</b> with multi-vendor equipment</li>
+          <li>Credential management: <b>RFID tags, facial/fingerprint biometrics, remote controls</b> with cross-vendor sync</li>
+          <li>Real-time distribution with <b>SignalR + Redis Backplane</b> and <b>SSE</b> for thousands of concurrent clients</li>
+          <li>Async messaging with <b>RabbitMQ</b> and <b>MassTransit</b>; scheduled jobs with <b>Hangfire</b></li>
+          <li>Hybrid persistence: SQL Server, MySQL, PostgreSQL, MongoDB + Redis</li>
+          <li>Monitoring with <b>OpenTelemetry + Prometheus</b>; containerization with <b>Docker Swarm</b></li>
         </ul>
       </div>
       <div class="tl-item reveal">
         <h3>Hiseg</h3>
-        <div class="tl-role">Desenvolvedor</div>
-        <div class="tl-date">ago/2022 — mar/2025 · Remoto · CE</div>
+        <div class="tl-role">Developer</div>
+        <div class="tl-date">Aug 2022 — Mar 2025 · Remote · CE</div>
         <ul>
-          <li>Desenvolvi sistema completo com integração a múltiplos fabricantes de controle de acesso</li>
-          <li>Comunicação <b>TCP/IP</b> com controladoras físicas processando eventos de veículos, moradores e equipamentos</li>
-          <li>Notificações em tempo real com <b>SignalR + Redis Backplane</b></li>
-          <li>Microsserviços com <b>Clean Architecture</b>, bancos relacionais e MongoDB</li>
-          <li>Testes automatizados com NUnit</li>
+          <li>Built a complete system with integration to multiple access control vendors</li>
+          <li><b>TCP/IP</b> communication with physical controllers processing events from vehicles, residents and equipment</li>
+          <li>Real-time notifications with <b>SignalR + Redis Backplane</b></li>
+          <li>Microservices with <b>Clean Architecture</b>, relational databases and MongoDB</li>
+          <li>Automated testing with NUnit</li>
         </ul>
       </div>
       <div class="tl-item reveal">
         <h3>BK Consultoria e Serviços</h3>
-        <div class="tl-role">Estagiário de TI</div>
-        <div class="tl-date">out/2020 — dez/2020 · Presencial · SP</div>
-        <ul><li>Suporte técnico, infraestrutura de redes e manutenção de hardware</li></ul>
+        <div class="tl-role">IT Intern</div>
+        <div class="tl-date">Oct 2020 — Dec 2020 · On-site · SP</div>
+        <ul><li>Technical support, network infrastructure and hardware maintenance</li></ul>
       </div>
     </div>
   </div>
 </section>
 
-<section id="realizacoes">
+<section id="projects">
   <div class="container">
-    <div class="section-label">Projetos</div>
-    <h2 class="section-title reveal">O que já entreguei</h2>
-    <p class="section-sub reveal">Sistemas distribuídos em produção, processando eventos de hardware em tempo real.</p>
+    <div class="section-label">Projects</div>
+    <h2 class="section-title reveal">What I've delivered</h2>
+    <p class="section-sub reveal">Distributed systems in production, processing hardware events in real time.</p>
     <div class="cards-grid">
-      <div class="glow-card reveal"><span class="ic">🏗️</span><h4>Plataforma de Microsserviços</h4><p>15+ microsserviços em Clean Architecture com comunicação assíncrona, bancos híbridos e deploy em Docker Swarm.</p><div class="tags"><span class="tag">.NET</span><span class="tag">MongoDB</span><span class="tag">RabbitMQ</span><span class="tag">Docker</span></div></div>
-      <div class="glow-card reveal"><span class="ic">🔌</span><h4>Hub de Dispositivos</h4><p>Gerenciamento unificado de tags RFID, biometria facial/digital, controles remotos e sincronização multi-fabricante.</p><div class="tags"><span class="tag">RFID</span><span class="tag">Biometria</span><span class="tag">Multi-fabricante</span></div></div>
-      <div class="glow-card reveal"><span class="ic">⚡</span><h4>Distribuição em Tempo Real</h4><p>Eventos entregues para milhares de clientes simultâneos com alta disponibilidade em múltiplas instâncias.</p><div class="tags"><span class="tag">SignalR</span><span class="tag">Redis Backplane</span><span class="tag">SSE</span></div></div>
-      <div class="glow-card reveal"><span class="ic">🧠</span><h4>Assistente de IA & Voz</h4><p>Assistente por voz com síntese de fala e integração com WhatsApp para automação de atendimento.</p><div class="tags"><span class="tag">Vapi</span><span class="tag">11Labs</span><span class="tag">WhatsApp</span></div></div>
-      <div class="glow-card reveal"><span class="ic">🎥</span><h4>Plataforma de Câmeras</h4><p>Gestão de dispositivos de vídeo com integração a DVRs e serviços de streaming.</p><div class="tags"><span class="tag">DVR</span><span class="tag">Streaming</span><span class="tag">Refit</span></div></div>
-      <div class="glow-card reveal"><span class="ic">🚨</span><h4>Monitoramento de Alarmes</h4><p>Processamento de eventos de centrais de alarme com notificação em tempo real.</p><div class="tags"><span class="tag">Alarmes</span><span class="tag">Zonas</span><span class="tag">PGMs</span></div></div>
-      <div class="glow-card reveal"><span class="ic">🖥️</span><h4>Sincronizador de Catracas</h4><p>Sincronização bidirecional com catracas via SDK nativo + cadastro biométrico desktop.</p><div class="tags"><span class="tag">ZKTeco SDK</span><span class="tag">WinForms</span><span class="tag">Workers</span></div></div>
-      <div class="glow-card reveal"><span class="ic">🔗</span><h4>BFF com SIP/VoIP</h4><p>Backend-for-Frontend com chamadas de voz e WebSocket.</p><div class="tags"><span class="tag">SIPSorcery</span><span class="tag">MediatR</span><span class="tag">WebSocket</span></div></div>
-      <div class="glow-card reveal"><span class="ic">📊</span><h4>Observabilidade</h4><p>Métricas, logs estruturados e monitoramento de APIs e workers.</p><div class="tags"><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">OpenTelemetry</span></div></div>
+      <div class="glow-card reveal"><span class="ic">🏗️</span><h4>Microservices Platform</h4><p>15+ microservices in Clean Architecture with async communication, hybrid databases and Docker Swarm deployment.</p><div class="tags"><span class="tag">.NET</span><span class="tag">MongoDB</span><span class="tag">RabbitMQ</span><span class="tag">Docker</span></div></div>
+      <div class="glow-card reveal"><span class="ic">🔌</span><h4>Device Hub</h4><p>Unified management of RFID tags, facial/fingerprint biometrics, remote controls and multi-vendor sync.</p><div class="tags"><span class="tag">RFID</span><span class="tag">Biometrics</span><span class="tag">Multi-vendor</span></div></div>
+      <div class="glow-card reveal"><span class="ic">⚡</span><h4>Real-time Distribution</h4><p>Events delivered to thousands of concurrent clients with multi-instance high availability.</p><div class="tags"><span class="tag">SignalR</span><span class="tag">Redis Backplane</span><span class="tag">SSE</span></div></div>
+      <div class="glow-card reveal"><span class="ic">🧠</span><h4>AI & Voice Assistant</h4><p>Voice assistant with speech synthesis and WhatsApp integration for automated customer service.</p><div class="tags"><span class="tag">Vapi</span><span class="tag">11Labs</span><span class="tag">WhatsApp</span></div></div>
+      <div class="glow-card reveal"><span class="ic">🎥</span><h4>Camera Platform</h4><p>Video device management with DVR and streaming service integration.</p><div class="tags"><span class="tag">DVR</span><span class="tag">Streaming</span><span class="tag">Refit</span></div></div>
+      <div class="glow-card reveal"><span class="ic">🚨</span><h4>Alarm Monitoring</h4><p>Event processing from alarm panels with real-time notifications.</p><div class="tags"><span class="tag">Alarms</span><span class="tag">Zones</span><span class="tag">PGMs</span></div></div>
+      <div class="glow-card reveal"><span class="ic">🖥️</span><h4>Turnstile Sync</h4><p>Bidirectional sync with turnstiles via native SDK + desktop biometric enrollment.</p><div class="tags"><span class="tag">ZKTeco SDK</span><span class="tag">WinForms</span><span class="tag">Workers</span></div></div>
+      <div class="glow-card reveal"><span class="ic">🔗</span><h4>BFF with SIP/VoIP</h4><p>Backend-for-Frontend with voice calls and WebSocket.</p><div class="tags"><span class="tag">SIPSorcery</span><span class="tag">MediatR</span><span class="tag">WebSocket</span></div></div>
+      <div class="glow-card reveal"><span class="ic">📊</span><h4>Observability</h4><p>Metrics, structured logging and monitoring of APIs and workers.</p><div class="tags"><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">OpenTelemetry</span></div></div>
     </div>
   </div>
 </section>
 
-<section id="contato" style="background: var(--bg2);">
+<section id="contact" style="background: var(--bg2);">
   <div class="container">
-    <div class="section-label">Contato</div>
-    <h2 class="section-title reveal">Vamos conversar?</h2>
+    <div class="section-label">Contact</div>
+    <h2 class="section-title reveal">Let's talk?</h2>
     <div class="contact-grid">
       <a class="contact-card reveal" href="mailto:vinicius.pmp19@gmail.com">
         <span class="ic">📧</span><h4>E-mail</h4><p>vinicius.pmp19@gmail.com</p>
       </a>
       <a class="contact-card reveal" href="tel:+5511986428031">
-        <span class="ic">📱</span><h4>Telefone</h4><p>(11) 98642-8031</p>
+        <span class="ic">📱</span><h4>Phone</h4><p>+55 11 98642-8031</p>
       </a>
       <a class="contact-card reveal" href="https://www.linkedin.com/in/vinicius-pinho-276637265/" target="_blank">
         <span class="ic">🔗</span><h4>LinkedIn</h4><p>in/vinicius-pinho</p>
@@ -440,16 +438,16 @@ footer .heart { color: var(--pink); }
 </section>
 
 <footer>
-  <div class="container">© 2026 Vinicius Passos · Feito com <span class="heart">♥</span> e muito .NET</div>
+  <div class="container">© 2026 Vinicius Passos · Built with <span class="heart">♥</span> and lots of .NET</div>
 </footer>
 
-<div class="lang-toggle"><a href="en/index.html">🇺🇸 English version</a></div>
+<div class="lang-toggle"><a href="index.html">🇧🇷 Versão em português</a></div>
 
 <script>
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
 
-const roles = ['Desenvolvedor Back-End .NET', 'Microsserviços & Arquitetura', 'Integração de Hardware Multi-fabricante', 'Biometria & Credenciais', 'Câmeras & Alarmes', 'IA, Voz & Integrações'];
+const roles = ['.NET Back-End Developer', 'Microservices & Architecture', 'Multi-vendor Hardware Integration', 'Biometrics & Credentials', 'Cameras & Alarms', 'AI, Voice & Integrations'];
 const typedEl = document.getElementById('typed');
 let ri = 0, ci = 0, deleting = false;
 function type() {
