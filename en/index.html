@@ -297,9 +297,9 @@ footer .heart { color: var(--pink); }
     <div class="about-grid">
       <div class="about-text reveal">
         <h2 class="section-title">Software engineer <span style="background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">end to end</span></h2>
-        <p>I work across every layer: from <span class="hl">capturing events from physical hardware</span> (access controllers, turnstiles, cameras, alarm panels) to the <span class="hl">real-time experience</span> for thousands of users.</p>
-        <p>Strong command of <span class="hl">proprietary protocols and native SDKs</span> from multiple vendors, async messaging, hybrid persistence (relational + NoSQL) and full observability.</p>
-        <p>I also build <span class="hl">AI and voice solutions</span> (voice assistant, WhatsApp), <span class="hl">desktop applications</span> (Windows Forms) and <span class="hl">workers</span> for continuous event capture and sync.</p>
+        <p>I work with <span class="hl">.NET microservices architecture</span> and data modeling using <span class="hl">relational and NoSQL databases</span> (SQL Server, MySQL, PostgreSQL, MongoDB, Redis) — 15+ services designed and running in production.</p>
+        <p>Responsible for <span class="hl">integrating and homologating equipment</span> for access control, turnstiles, cameras, alarms and <span class="hl">smart lockers</span>, through proprietary protocols and native SDKs from multiple vendors.</p>
+        <p>I developed the platform's <span class="hl">real-time events microservice</span> — hardware event capture, async queues and live distribution via SignalR — while also leading <span class="hl">innovation initiatives</span>: AI, voice, chatbot, BFF and new integrations.</p>
       </div>
       <div class="about-cards reveal">
         <div class="info-card"><div class="ic">📍</div><div><h4>Location</h4><p>Guarulhos, SP, Brazil — Remote</p></div></div>
@@ -375,7 +375,6 @@ footer .heart { color: var(--pink); }
           <li>Real-time distribution with <b>SignalR + Redis Backplane</b> and <b>SSE</b> for thousands of concurrent clients</li>
           <li>Async messaging with <b>RabbitMQ</b> and <b>MassTransit</b>; scheduled jobs with <b>Hangfire</b></li>
           <li>Hybrid persistence: SQL Server, MySQL, PostgreSQL, MongoDB + Redis</li>
-          <li>Monitoring with <b>OpenTelemetry + Prometheus</b>; containerization with <b>Docker Swarm</b></li>
           <li>GPS tracking of visitors and contractors: device linking, "in use" rules, real-time position and history</li>
           <li>Integration with a <b>gatehouse receiver via binary protocol</b> over TCP sockets (events, schedules, biometrics and relay triggering)</li>
           <li><b>Autonomous gatehouse</b> platform: reservations with time-conflict detection, rental, assemblies/polls with per-unit voting, classifieds with chat, documents and incidents</li>
@@ -413,7 +412,7 @@ footer .heart { color: var(--pink); }
       <div class="glow-card reveal"><span class="ic">🏗️</span><h4>Microservices Platform</h4><p>15+ microservices in Clean Architecture with async communication, hybrid databases and Docker Swarm deployment.</p><div class="tags"><span class="tag">.NET</span><span class="tag">MongoDB</span><span class="tag">RabbitMQ</span><span class="tag">Docker</span></div></div>
       <div class="glow-card reveal"><span class="ic">🔌</span><h4>Device Hub</h4><p>Unified management of RFID tags, facial/fingerprint biometrics, remote controls and multi-vendor sync.</p><div class="tags"><span class="tag">RFID</span><span class="tag">Biometrics</span><span class="tag">Multi-vendor</span></div></div>
       <div class="glow-card reveal"><span class="ic">⚡</span><h4>Real-time Distribution</h4><p>Events delivered to thousands of concurrent clients with multi-instance high availability.</p><div class="tags"><span class="tag">SignalR</span><span class="tag">Redis Backplane</span><span class="tag">SSE</span></div></div>
-      <div class="glow-card reveal"><span class="ic">🧠</span><h4>AI & Voice Assistant</h4><p>Voice assistant with speech synthesis and WhatsApp integration for automated customer service.</p><div class="tags"><span class="tag">Vapi</span><span class="tag">11Labs</span><span class="tag">WhatsApp</span></div></div>
+      <div class="glow-card reveal"><span class="ic">🧠</span><h4>Chatbot & AI</h4><p>Chatbot integrated with ChatWoot using RabbitMQ queues and a processing worker for automated customer service.</p><div class="tags"><span class="tag">ChatWoot</span><span class="tag">RabbitMQ</span><span class="tag">Worker</span></div></div>
       <div class="glow-card reveal"><span class="ic">🎥</span><h4>Camera Platform</h4><p>Video device management with DVR and streaming service integration.</p><div class="tags"><span class="tag">DVR</span><span class="tag">Streaming</span><span class="tag">Refit</span></div></div>
       <div class="glow-card reveal"><span class="ic">🚨</span><h4>Alarm Monitoring</h4><p>Event processing from alarm panels with real-time notifications.</p><div class="tags"><span class="tag">Alarms</span><span class="tag">Zones</span><span class="tag">PGMs</span></div></div>
       <div class="glow-card reveal"><span class="ic">🖥️</span><h4>Turnstile Sync</h4><p>Bidirectional sync with turnstiles via native SDK + desktop biometric enrollment.</p><div class="tags"><span class="tag">ZKTeco SDK</span><span class="tag">WinForms</span><span class="tag">Workers</span></div></div>
