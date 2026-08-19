@@ -376,6 +376,10 @@ footer .heart { color: var(--pink); }
           <li>Async messaging with <b>RabbitMQ</b> and <b>MassTransit</b>; scheduled jobs with <b>Hangfire</b></li>
           <li>Hybrid persistence: SQL Server, MySQL, PostgreSQL, MongoDB + Redis</li>
           <li>Monitoring with <b>OpenTelemetry + Prometheus</b>; containerization with <b>Docker Swarm</b></li>
+          <li>GPS tracking of visitors and contractors: device linking, "in use" rules, real-time position and history</li>
+          <li>Integration with a <b>gatehouse receiver via binary protocol</b> over TCP sockets (events, schedules, biometrics and relay triggering)</li>
+          <li><b>Autonomous gatehouse</b> platform: reservations with time-conflict detection, rental, assemblies/polls with per-unit voting, classifieds with chat, documents and incidents</li>
+          <li>Integration with <b>smart lockers</b> for autonomous item and goods pickup</li>
         </ul>
       </div>
       <div class="tl-item reveal">
@@ -415,6 +419,12 @@ footer .heart { color: var(--pink); }
       <div class="glow-card reveal"><span class="ic">🖥️</span><h4>Turnstile Sync</h4><p>Bidirectional sync with turnstiles via native SDK + desktop biometric enrollment.</p><div class="tags"><span class="tag">ZKTeco SDK</span><span class="tag">WinForms</span><span class="tag">Workers</span></div></div>
       <div class="glow-card reveal"><span class="ic">🔗</span><h4>BFF with SIP/VoIP</h4><p>Backend-for-Frontend with voice calls and WebSocket.</p><div class="tags"><span class="tag">SIPSorcery</span><span class="tag">MediatR</span><span class="tag">WebSocket</span></div></div>
       <div class="glow-card reveal"><span class="ic">📊</span><h4>Observability</h4><p>Metrics, structured logging and monitoring of APIs and workers.</p><div class="tags"><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">OpenTelemetry</span></div></div>
+      <div class="glow-card reveal"><span class="ic">📍</span><h4>GPS Tracking</h4><p>Linking GPS trackers to visitors and contractors with "in use" rules, real-time position and history.</p><div class="tags"><span class="tag">Dapper</span><span class="tag">MySQL</span><span class="tag">Refit</span><span class="tag">FluentValidation</span></div></div>
+      <div class="glow-card reveal"><span class="ic">🏢</span><h4>Autonomous Gatehouse</h4><p>Reservations with time-conflict blocking, rental, assemblies/polls with per-unit voting, classifieds with chat, document management, duty shifts, incidents and guests.</p><div class="tags"><span class="tag">SignalR</span><span class="tag">Redis Backplane</span><span class="tag">RabbitMQ</span><span class="tag">MongoDB</span></div></div>
+      <div class="glow-card reveal"><span class="ic">🎛️</span><h4>Gatehouse Receiver</h4><p>Binary protocol integration over TCP sockets with displays, schedules, biometrics and relays — with checksum and hex frames.</p><div class="tags"><span class="tag">TCP Socket</span><span class="tag">Binary protocol</span><span class="tag">Biometrics</span></div></div>
+      <div class="glow-card reveal"><span class="ic">📦</span><h4>Smart Lockers</h4><p>Integration with lockers for autonomous goods delivery and pickup, notifying users via push notification in the app.</p><div class="tags"><span class="tag">Lockers</span><span class="tag">.NET</span><span class="tag">Integration</span></div></div>
+      <div class="glow-card reveal"><span class="ic">📬</span><h4>Delivery Management</h4><p>Package tracking with a complete flow — from arrival to locker pickup — with recipient notification.</p><div class="tags"><span class="tag">.NET</span><span class="tag">Microservice</span><span class="tag">Notifications</span></div></div>
+      <div class="glow-card reveal"><span class="ic">🗂️</span><h4>Incidents & Services</h4><p>Incident logging, work orders, duty shifts and guest management integrated with the gatehouse.</p><div class="tags"><span class="tag">.NET</span><span class="tag">API</span><span class="tag">Integration</span></div></div>
     </div>
   </div>
 </section>
