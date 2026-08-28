@@ -215,6 +215,13 @@ section { padding: 90px 0; position: relative; }
 footer { border-top: 1px solid rgba(255,255,255,0.07); padding: 32px 0; text-align: center; color: var(--muted); font-size: 13px; }
 footer .heart { color: var(--pink); }
 
+/* Professional inline SVG icons */
+svg.i { display: inline-block; width: 1em; height: 1em; vertical-align: -0.125em; flex-shrink: 0; }
+.info-card .ic svg.i, .expertise-card .ic svg.i, .glow-card .ic svg.i, .contact-card .ic svg.i { display: block; }
+.float-chip svg.i { width: 18px; height: 18px; }
+.lang-toggle svg.i { width: 15px; height: 15px; }
+footer .heart svg.i { width: 12px; height: 12px; }
+
 .lang-toggle { position: fixed; right: 24px; bottom: 24px; z-index: 60; }
 .lang-toggle a {
   display: inline-flex; align-items: center; gap: 8px;
@@ -246,6 +253,37 @@ footer .heart { color: var(--pink); }
 </style>
 </head>
 <body>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-settings" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-plug" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-5"/><path d="M15 8V2"/><path d="M17 8a1 1 0 0 1 1 1v4a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1z"/><path d="M9 8V2"/></symbol>
+  <symbol id="i-brain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18V5"/><path d="M15 13a4.17 4.17 0 0 1-3-4 4.17 4.17 0 0 1-3 4"/><path d="M17.598 6.5A3 3 0 1 0 12 5a3 3 0 1 0-5.598 1.5"/><path d="M17.997 5.125a4 4 0 0 1 2.526 5.77"/><path d="M18 18a4 4 0 0 0 2-7.464"/><path d="M19.967 17.483A4 4 0 1 1 12 18a4 4 0 1 1-7.967-.517"/><path d="M6 18a4 4 0 0 1-2-7.464"/><path d="M6.003 5.125a4 4 0 0 0-2.526 5.77"/></symbol>
+  <symbol id="i-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-puzzle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.39 4.39a1 1 0 0 0 1.68-.474 2.5 2.5 0 1 1 3.014 3.015 1 1 0 0 0-.474 1.68l1.683 1.682a2.414 2.414 0 0 1 0 3.414L19.61 15.39a1 1 0 0 1-1.68-.474 2.5 2.5 0 1 0-3.014 3.015 1 1 0 0 1 .474 1.68l-1.683 1.682a2.414 2.414 0 0 1-3.414 0L8.61 19.61a1 1 0 0 0-1.68.474 2.5 2.5 0 1 1-3.014-3.015 1 1 0 0 0 .474-1.68l-1.683-1.682a2.414 2.414 0 0 1 0-3.414L4.39 8.61a1 1 0 0 1 1.68.474 2.5 2.5 0 1 0 3.014-3.015 1 1 0 0 1-.474-1.68l1.683-1.682a2.414 2.414 0 0 1 3.414 0z"/></symbol>
+  <symbol id="i-graduation-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+  <symbol id="i-building-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12h4"/><path d="M10 8h4"/><path d="M14 21v-3a2 2 0 0 0-4 0v3"/><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/></symbol>
+  <symbol id="i-scan-face" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01"/><path d="M15 9h.01"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></symbol>
+  <symbol id="i-siren" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18v-6a5 5 0 1 1 10 0v6"/><path d="M5 21a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2z"/><path d="M21 12h1"/><path d="M18.5 4.5 18 5"/><path d="M2 12h1"/><path d="M12 2v1"/><path d="m4.929 4.929.707.707"/><path d="M12 12v6"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.914 4a1.5 1.5 0 0 0-2.474-1.561l-9 9A1.5 1.5 0 0 0 5.5 14h4.002a.5.5 0 0 1 .471.666L8.086 20a1.5 1.5 0 0 0 2.475 1.56l9-9A1.5 1.5 0 0 0 18.5 10h-3.997a.5.5 0 0 1-.472-.667z"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
+  <symbol id="i-chart-bar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 16h8"/><path d="M7 11h12"/><path d="M7 6h3"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M12 6h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M16 6h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/><path d="M8 6h.01"/><path d="M9 22v-3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/><rect x="4" y="2" width="16" height="20" rx="2"/></symbol>
+  <symbol id="i-sliders-horizontal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/></symbol>
+  <symbol id="i-package" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></symbol>
+  <symbol id="i-mail-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.2 8.4c.5.38.8.97.8 1.6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 .8-1.6l8-6a2 2 0 0 1 2.4 0l8 6Z"/><path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></symbol>
+  <symbol id="i-smartphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></symbol>
+</svg>
+
+
 
 <div class="blobs"><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div></div>
 <div class="grid-overlay"></div>
@@ -284,9 +322,9 @@ footer .heart { color: var(--pink); }
     <div class="hero-photo">
       <div class="photo-ring"></div>
       <div class="photo-wrap"><img src="vinicius-foto.jpg" alt="Vinicius Passos"></div>
-      <div class="float-chip c1">⚙️ .NET & Microservices</div>
-      <div class="float-chip c2">🔌 Multi-vendor Hardware</div>
-      <div class="float-chip c3">🧠 AI & Integrations</div>
+      <div class="float-chip c1"><svg class="i" aria-hidden="true"><use href="#i-settings"></use></svg> .NET & Microservices</div>
+      <div class="float-chip c2"><svg class="i" aria-hidden="true"><use href="#i-plug"></use></svg> Multi-vendor Hardware</div>
+      <div class="float-chip c3"><svg class="i" aria-hidden="true"><use href="#i-brain"></use></svg> AI & Integrations</div>
     </div>
   </div>
 </header>
@@ -302,10 +340,10 @@ footer .heart { color: var(--pink); }
         <p>I developed the platform's <span class="hl">real-time events microservice</span> — hardware event capture, async queues and live distribution via SignalR — while also leading <span class="hl">innovation initiatives</span>: AI, voice, chatbot, BFF and new integrations.</p>
       </div>
       <div class="about-cards reveal">
-        <div class="info-card"><div class="ic">📍</div><div><h4>Location</h4><p>Guarulhos, SP, Brazil — Remote</p></div></div>
-        <div class="info-card"><div class="ic">🧩</div><div><h4>Specialties</h4><p>Microservices, Hardware, Biometrics, Cameras, Alarms, AI, Real-time</p></div></div>
-        <div class="info-card"><div class="ic">🎓</div><div><h4>Education</h4><p>B.Sc. Computer Science — UNICSUL (2021)</p></div></div>
-        <div class="info-card"><div class="ic">🌎</div><div><h4>Languages</h4><p>Portuguese (native) · English (intermediate-advanced)</p></div></div>
+        <div class="info-card"><div class="ic"><svg class="i" aria-hidden="true"><use href="#i-map-pin"></use></svg></div><div><h4>Location</h4><p>Guarulhos, SP, Brazil — Remote</p></div></div>
+        <div class="info-card"><div class="ic"><svg class="i" aria-hidden="true"><use href="#i-puzzle"></use></svg></div><div><h4>Specialties</h4><p>Microservices, Hardware, Biometrics, Cameras, Alarms, AI, Real-time</p></div></div>
+        <div class="info-card"><div class="ic"><svg class="i" aria-hidden="true"><use href="#i-graduation-cap"></use></svg></div><div><h4>Education</h4><p>B.Sc. Computer Science — UNICSUL (2021)</p></div></div>
+        <div class="info-card"><div class="ic"><svg class="i" aria-hidden="true"><use href="#i-globe"></use></svg></div><div><h4>Languages</h4><p>Portuguese (native) · English (intermediate-advanced)</p></div></div>
       </div>
     </div>
   </div>
@@ -317,18 +355,18 @@ footer .heart { color: var(--pink); }
     <h2 class="section-title reveal">What I do</h2>
     <p class="section-sub reveal">.NET back-end applied to physical and distributed systems — from hardware to the cloud.</p>
     <div class="expertise-grid">
-      <div class="expertise-card reveal"><span class="ic">🏗️</span><h4>.NET Microservices</h4><p>Architecture and evolution of 15+ microservices with Clean Architecture, async communication and hybrid databases.</p><span class="tag-line">.NET 7-10 · MongoDB · Docker · Dapper</span></div>
-      <div class="expertise-card reveal"><span class="ic">🔌</span><h4>Hardware Integration</h4><p>Communication with access controllers, turnstiles, cameras and alarms via native SDKs, TCP and proprietary protocols.</p><span class="tag-line">ZKTeco · Intelbras · Hikvision · ControlID · NICE</span></div>
-      <div class="expertise-card reveal"><span class="ic">🫆</span><h4>Biometrics & Credentials</h4><p>Management of RFID tags, facial and fingerprint biometrics and remote controls, with cross-vendor sync and export.</p><span class="tag-line">RFID · Facial · Fingerprint · Multi-vendor</span></div>
-      <div class="expertise-card reveal"><span class="ic">🎥</span><h4>Cameras & Streaming</h4><p>Video device management, DVR integration and high-scale streaming services.</p><span class="tag-line">DVR · Streaming · ISAPI · CGI</span></div>
-      <div class="expertise-card reveal"><span class="ic">🚨</span><h4>Alarms & Sensors</h4><p>Event processing from alarm panels, zones, partitions and programmable outputs.</p><span class="tag-line">PGMs · Zones · Contact ID · TCP</span></div>
-      <div class="expertise-card reveal"><span class="ic">⚡</span><h4>Real-time</h4><p>Event distribution to thousands of concurrent clients with multi-instance high availability.</p><span class="tag-line">SignalR · Redis Backplane · WebSockets · SSE</span></div>
-      <div class="expertise-card reveal"><span class="ic">🧠</span><h4>AI & Voice</h4><p>Voice assistants, speech synthesis and WhatsApp integration for automated customer service.</p><span class="tag-line">Vapi · 11Labs · WhatsApp API</span></div>
-      <div class="expertise-card reveal"><span class="ic">📨</span><h4>Messaging & Jobs</h4><p>Distributed processing with queues, events and scheduled background jobs.</p><span class="tag-line">RabbitMQ · MassTransit · Hangfire</span></div>
-      <div class="expertise-card reveal"><span class="ic">🖥️</span><h4>Desktop & Workers</h4><p>Desktop apps for biometric enrollment and workers for continuous event capture and sync.</p><span class="tag-line">Windows Forms · Worker Services · Native SDKs</span></div>
-      <div class="expertise-card reveal"><span class="ic">🔗</span><h4>BFF & SIP/VoIP</h4><p>Backend-for-Frontend with voice-over-IP support, video intercoms and access terminals.</p><span class="tag-line">SIPSorcery · MediatR · WebSocket</span></div>
-      <div class="expertise-card reveal"><span class="ic">📊</span><h4>Observability</h4><p>Metrics, structured logging and monitoring of APIs and workers in production.</p><span class="tag-line">Prometheus · Grafana · Serilog · OpenTelemetry</span></div>
-      <div class="expertise-card reveal"><span class="ic">🔐</span><h4>Security & Auth</h4><p>Authentication and authorization in APIs: JWT, Basic Auth and OAuth2.</p><span class="tag-line">JWT · OAuth2 · Refit · FluentValidation</span></div>
+      <div class="expertise-card reveal"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-building-2"></use></svg></span><h4>.NET Microservices</h4><p>Architecture and evolution of 15+ microservices with Clean Architecture, async communication and hybrid databases.</p><span class="tag-line">.NET 7-10 · MongoDB · Docker · Dapper</span></div>
+      <div class="expertise-card reveal"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-plug"></use></svg></span><h4>Hardware Integration</h4><p>Communication with access controllers, turnstiles, cameras and alarms via native SDKs, TCP and proprietary protocols.</p><span class="tag-line">ZKTeco · Intelbras · Hikvision · ControlID · NICE</span></div>
+      <div class="expertise-card reveal"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-scan-face"></use></svg></span><h4>Biometrics & Credentials</h4><p>Management of RFID tags, facial and fingerprint biometrics and remote controls, with cross-vendor sync and export.</p><span class="tag-line">RFID · Facial · Fingerprint · Multi-vendor</span></div>
+      <div class="expertise-card reveal"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-video"></use></svg></span><h4>Cameras & Streaming</h4><p>Video device management, DVR integration and high-scale streaming services.</p><span class="tag-line">DVR · Streaming · ISAPI · CGI</span></div>
+      <div class="expertise-card reveal"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-siren"></use></svg></span><h4>Alarms & Sensors</h4><p>Event processing from alarm panels, zones, partitions and programmable outputs.</p><span class="tag-line">PGMs · Zones · Contact ID · TCP</span></div>
+      <div class="expertise-card reveal"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-zap"></use></svg></span><h4>Real-time</h4><p>Event distribution to thousands of concurrent clients with multi-instance high availability.</p><span class="tag-line">SignalR · Redis Backplane · WebSockets · SSE</span></div>
+      <div class="expertise-card reveal"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-brain"></use></svg></span><h4>AI & Voice</h4><p>Voice assistants, speech synthesis and WhatsApp integration for automated customer service.</p><span class="tag-line">Vapi · 11Labs · WhatsApp API</span></div>
+      <div class="expertise-card reveal"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-send"></use></svg></span><h4>Messaging & Jobs</h4><p>Distributed processing with queues, events and scheduled background jobs.</p><span class="tag-line">RabbitMQ · MassTransit · Hangfire</span></div>
+      <div class="expertise-card reveal"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-monitor"></use></svg></span><h4>Desktop & Workers</h4><p>Desktop apps for biometric enrollment and workers for continuous event capture and sync.</p><span class="tag-line">Windows Forms · Worker Services · Native SDKs</span></div>
+      <div class="expertise-card reveal"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-link"></use></svg></span><h4>BFF & SIP/VoIP</h4><p>Backend-for-Frontend with voice-over-IP support, video intercoms and access terminals.</p><span class="tag-line">SIPSorcery · MediatR · WebSocket</span></div>
+      <div class="expertise-card reveal"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-chart-bar"></use></svg></span><h4>Observability</h4><p>Metrics, structured logging and monitoring of APIs and workers in production.</p><span class="tag-line">Prometheus · Grafana · Serilog · OpenTelemetry</span></div>
+      <div class="expertise-card reveal"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-lock"></use></svg></span><h4>Security & Auth</h4><p>Authentication and authorization in APIs: JWT, Basic Auth and OAuth2.</p><span class="tag-line">JWT · OAuth2 · Refit · FluentValidation</span></div>
     </div>
   </div>
 </section>
@@ -409,21 +447,21 @@ footer .heart { color: var(--pink); }
     <h2 class="section-title reveal">What I've delivered</h2>
     <p class="section-sub reveal">Distributed systems in production, processing hardware events in real time.</p>
     <div class="cards-grid">
-      <div class="glow-card reveal"><span class="ic">🏗️</span><h4>Microservices Platform</h4><p>15+ microservices in Clean Architecture with async communication, hybrid databases and Docker Swarm deployment.</p><div class="tags"><span class="tag">.NET</span><span class="tag">MongoDB</span><span class="tag">RabbitMQ</span><span class="tag">Docker</span></div></div>
-      <div class="glow-card reveal"><span class="ic">🔌</span><h4>Device Hub</h4><p>Unified management of RFID tags, facial/fingerprint biometrics, remote controls and multi-vendor sync.</p><div class="tags"><span class="tag">RFID</span><span class="tag">Biometrics</span><span class="tag">Multi-vendor</span></div></div>
-      <div class="glow-card reveal"><span class="ic">⚡</span><h4>Real-time Distribution</h4><p>Events delivered to thousands of concurrent clients with multi-instance high availability.</p><div class="tags"><span class="tag">SignalR</span><span class="tag">Redis Backplane</span><span class="tag">SSE</span></div></div>
-      <div class="glow-card reveal"><span class="ic">🧠</span><h4>Chatbot & AI</h4><p>Chatbot integrated with ChatWoot using RabbitMQ queues and a processing worker for automated customer service.</p><div class="tags"><span class="tag">ChatWoot</span><span class="tag">RabbitMQ</span><span class="tag">Worker</span></div></div>
-      <div class="glow-card reveal"><span class="ic">🎥</span><h4>Camera Platform</h4><p>Video device management with DVR and streaming service integration.</p><div class="tags"><span class="tag">DVR</span><span class="tag">Streaming</span><span class="tag">Refit</span></div></div>
-      <div class="glow-card reveal"><span class="ic">🚨</span><h4>Alarm Monitoring</h4><p>Event processing from alarm panels with real-time notifications.</p><div class="tags"><span class="tag">Alarms</span><span class="tag">Zones</span><span class="tag">PGMs</span></div></div>
-      <div class="glow-card reveal"><span class="ic">🖥️</span><h4>Turnstile Sync</h4><p>Bidirectional sync with turnstiles via native SDK + desktop biometric enrollment.</p><div class="tags"><span class="tag">ZKTeco SDK</span><span class="tag">WinForms</span><span class="tag">Workers</span></div></div>
-      <div class="glow-card reveal"><span class="ic">🔗</span><h4>BFF with SIP/VoIP</h4><p>Backend-for-Frontend with voice calls and WebSocket.</p><div class="tags"><span class="tag">SIPSorcery</span><span class="tag">MediatR</span><span class="tag">WebSocket</span></div></div>
-      <div class="glow-card reveal"><span class="ic">📊</span><h4>Observability</h4><p>Metrics, structured logging and monitoring of APIs and workers.</p><div class="tags"><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">OpenTelemetry</span></div></div>
-      <div class="glow-card reveal"><span class="ic">📍</span><h4>GPS Tracking</h4><p>Linking GPS trackers to visitors and contractors with "in use" rules, real-time position and history.</p><div class="tags"><span class="tag">Dapper</span><span class="tag">MySQL</span><span class="tag">Refit</span><span class="tag">FluentValidation</span></div></div>
-      <div class="glow-card reveal"><span class="ic">🏢</span><h4>Autonomous Gatehouse</h4><p>Reservations with time-conflict blocking, rental, assemblies/polls with per-unit voting, classifieds with chat, document management, duty shifts, incidents and guests.</p><div class="tags"><span class="tag">SignalR</span><span class="tag">Redis Backplane</span><span class="tag">RabbitMQ</span><span class="tag">MongoDB</span></div></div>
-      <div class="glow-card reveal"><span class="ic">🎛️</span><h4>Gatehouse Receiver</h4><p>Binary protocol integration over TCP sockets with displays, schedules, biometrics and relays — with checksum and hex frames.</p><div class="tags"><span class="tag">TCP Socket</span><span class="tag">Binary protocol</span><span class="tag">Biometrics</span></div></div>
-      <div class="glow-card reveal"><span class="ic">📦</span><h4>Smart Lockers</h4><p>Integration with lockers for autonomous goods delivery and pickup, notifying users via push notification in the app.</p><div class="tags"><span class="tag">Lockers</span><span class="tag">.NET</span><span class="tag">Integration</span></div></div>
-      <div class="glow-card reveal"><span class="ic">📬</span><h4>Delivery Management</h4><p>Package tracking with a complete flow — from arrival to locker pickup — with recipient notification.</p><div class="tags"><span class="tag">.NET</span><span class="tag">Microservice</span><span class="tag">Notifications</span></div></div>
-      <div class="glow-card reveal"><span class="ic">🗂️</span><h4>Incidents & Services</h4><p>Incident logging, work orders, duty shifts and guest management integrated with the gatehouse.</p><div class="tags"><span class="tag">.NET</span><span class="tag">API</span><span class="tag">Integration</span></div></div>
+      <div class="glow-card reveal"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-building-2"></use></svg></span><h4>Microservices Platform</h4><p>15+ microservices in Clean Architecture with async communication, hybrid databases and Docker Swarm deployment.</p><div class="tags"><span class="tag">.NET</span><span class="tag">MongoDB</span><span class="tag">RabbitMQ</span><span class="tag">Docker</span></div></div>
+      <div class="glow-card reveal"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-plug"></use></svg></span><h4>Device Hub</h4><p>Unified management of RFID tags, facial/fingerprint biometrics, remote controls and multi-vendor sync.</p><div class="tags"><span class="tag">RFID</span><span class="tag">Biometrics</span><span class="tag">Multi-vendor</span></div></div>
+      <div class="glow-card reveal"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-zap"></use></svg></span><h4>Real-time Distribution</h4><p>Events delivered to thousands of concurrent clients with multi-instance high availability.</p><div class="tags"><span class="tag">SignalR</span><span class="tag">Redis Backplane</span><span class="tag">SSE</span></div></div>
+      <div class="glow-card reveal"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-brain"></use></svg></span><h4>Chatbot & AI</h4><p>Chatbot integrated with ChatWoot using RabbitMQ queues and a processing worker for automated customer service.</p><div class="tags"><span class="tag">ChatWoot</span><span class="tag">RabbitMQ</span><span class="tag">Worker</span></div></div>
+      <div class="glow-card reveal"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-video"></use></svg></span><h4>Camera Platform</h4><p>Video device management with DVR and streaming service integration.</p><div class="tags"><span class="tag">DVR</span><span class="tag">Streaming</span><span class="tag">Refit</span></div></div>
+      <div class="glow-card reveal"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-siren"></use></svg></span><h4>Alarm Monitoring</h4><p>Event processing from alarm panels with real-time notifications.</p><div class="tags"><span class="tag">Alarms</span><span class="tag">Zones</span><span class="tag">PGMs</span></div></div>
+      <div class="glow-card reveal"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-monitor"></use></svg></span><h4>Turnstile Sync</h4><p>Bidirectional sync with turnstiles via native SDK + desktop biometric enrollment.</p><div class="tags"><span class="tag">ZKTeco SDK</span><span class="tag">WinForms</span><span class="tag">Workers</span></div></div>
+      <div class="glow-card reveal"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-link"></use></svg></span><h4>BFF with SIP/VoIP</h4><p>Backend-for-Frontend with voice calls and WebSocket.</p><div class="tags"><span class="tag">SIPSorcery</span><span class="tag">MediatR</span><span class="tag">WebSocket</span></div></div>
+      <div class="glow-card reveal"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-chart-bar"></use></svg></span><h4>Observability</h4><p>Metrics, structured logging and monitoring of APIs and workers.</p><div class="tags"><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">OpenTelemetry</span></div></div>
+      <div class="glow-card reveal"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-map-pin"></use></svg></span><h4>GPS Tracking</h4><p>Linking GPS trackers to visitors and contractors with "in use" rules, real-time position and history.</p><div class="tags"><span class="tag">Dapper</span><span class="tag">MySQL</span><span class="tag">Refit</span><span class="tag">FluentValidation</span></div></div>
+      <div class="glow-card reveal"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-building"></use></svg></span><h4>Autonomous Gatehouse</h4><p>Reservations with time-conflict blocking, rental, assemblies/polls with per-unit voting, classifieds with chat, document management, duty shifts, incidents and guests.</p><div class="tags"><span class="tag">SignalR</span><span class="tag">Redis Backplane</span><span class="tag">RabbitMQ</span><span class="tag">MongoDB</span></div></div>
+      <div class="glow-card reveal"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-sliders-horizontal"></use></svg></span><h4>Gatehouse Receiver</h4><p>Binary protocol integration over TCP sockets with displays, schedules, biometrics and relays — with checksum and hex frames.</p><div class="tags"><span class="tag">TCP Socket</span><span class="tag">Binary protocol</span><span class="tag">Biometrics</span></div></div>
+      <div class="glow-card reveal"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-package"></use></svg></span><h4>Smart Lockers</h4><p>Integration with lockers for autonomous goods delivery and pickup, notifying users via push notification in the app.</p><div class="tags"><span class="tag">Lockers</span><span class="tag">.NET</span><span class="tag">Integration</span></div></div>
+      <div class="glow-card reveal"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-mail-open"></use></svg></span><h4>Delivery Management</h4><p>Package tracking with a complete flow — from arrival to locker pickup — with recipient notification.</p><div class="tags"><span class="tag">.NET</span><span class="tag">Microservice</span><span class="tag">Notifications</span></div></div>
+      <div class="glow-card reveal"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-folder"></use></svg></span><h4>Incidents & Services</h4><p>Incident logging, work orders, duty shifts and guest management integrated with the gatehouse.</p><div class="tags"><span class="tag">.NET</span><span class="tag">API</span><span class="tag">Integration</span></div></div>
     </div>
   </div>
 </section>
@@ -434,23 +472,23 @@ footer .heart { color: var(--pink); }
     <h2 class="section-title reveal">Let's talk?</h2>
     <div class="contact-grid">
       <a class="contact-card reveal" href="mailto:vinicius.pmp19@gmail.com">
-        <span class="ic">📧</span><h4>E-mail</h4><p>vinicius.pmp19@gmail.com</p>
+        <span class="ic"><svg class="i" aria-hidden="true"><use href="#i-mail"></use></svg></span><h4>E-mail</h4><p>vinicius.pmp19@gmail.com</p>
       </a>
       <a class="contact-card reveal" href="tel:+5511986428031">
-        <span class="ic">📱</span><h4>Phone</h4><p>+55 11 98642-8031</p>
+        <span class="ic"><svg class="i" aria-hidden="true"><use href="#i-smartphone"></use></svg></span><h4>Phone</h4><p>+55 11 98642-8031</p>
       </a>
       <a class="contact-card reveal" href="https://www.linkedin.com/in/vinicius-passos-moraes" target="_blank">
-        <span class="ic">🔗</span><h4>LinkedIn</h4><p>in/vinicius-passos-moraes</p>
+        <span class="ic"><svg class="i" aria-hidden="true"><use href="#i-linkedin"></use></svg></span><h4>LinkedIn</h4><p>in/vinicius-passos-moraes</p>
       </a>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="container">© 2026 Vinicius Passos · Built with <span class="heart">♥</span> and lots of .NET</div>
+  <div class="container">© 2026 Vinicius Passos · Built with <span class="heart"><svg class="i" aria-hidden="true"><use href="#i-heart"></use></svg></span> and lots of .NET</div>
 </footer>
 
-<div class="lang-toggle"><a href="../index.html">🇧🇷 Versão em português</a></div>
+<div class="lang-toggle"><a href="../index.html"><svg class="i" aria-hidden="true"><use href="#i-globe"></use></svg> Versão em português</a></div>
 
 <script>
 const nav = document.getElementById('nav');
